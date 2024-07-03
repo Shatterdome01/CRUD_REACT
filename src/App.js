@@ -10,7 +10,14 @@ const App = () => {
   const [editingItem, setEditingItem] = useState(null);
 
   useEffect(() => {
-    axiosItems();
+    const fetchItems = async () => {
+      try {
+        await axiosItems();
+      } catch (error) {
+        console.error('Error fetching items:', error);
+      }
+    };
+    fetchItems().catch(error => console.error('Error in useEffect:', error));
   }, []);
 
   const axiosItems = async () => {
