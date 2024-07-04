@@ -1,0 +1,8 @@
+[build]
+command = "npm run build"  # Comando para construir tu aplicación React
+functions = "crud/functions"  # Directorio donde están las funciones serverless
+publish = "build"  # Directorio donde está el build de tu aplicación React
+
+[dev]
+command = "npm start"  # Comando para iniciar el entorno de desarrollo local
+functions = "crud/functions"  # Directorio de funciones para entorno de desarrollo
